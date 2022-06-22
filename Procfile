@@ -1,0 +1,1 @@
+web: gunicorn SharingIsCaring.wsgi --log-file -

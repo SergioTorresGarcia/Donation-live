@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <header>
+      <nav class="container container--70">
+        <ul class="nav--actions">
+          <li><a href="#">Zaloguj</a></li>
+          <li class="highlighted"><a href="{% url 'giveAway:register' %}">Załóż konto</a></li>
+        </ul>
+
+        {% include 'nav_bar.html' %}
+
+      </nav>
+    </header>
+
+    <section class="login-page">
+      <h2>Zaloguj się</h2>
+        <label style="color: darkred">{{ error }}</label>
+      <form method="POST">
+          {% csrf_token %}
+
+        <div class="form-group">
+          {{ form.as_p }}
+        </div>
+
+        <div class="form-group">
+          <a href="#" class="btn btn--small btn--without-border reset-password">Przypomnij hasło</a>
+        </div>
+
+        <div class="form-group form-group--buttons">
+          <a href="{% url 'giveAway:register' %}" class="btn btn--without-border">Załóż konto</a>
+          <button class="btn" type="submit">Zaloguj się</button>
+        </div>
+      </form>
+    </section>
+
+{% endblock %}
+
