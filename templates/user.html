@@ -53,7 +53,7 @@
                             <p  class="summary" style="color:lightslategray; font-size: small">
                                 <label>- Kiedy: {{ donation.pick_up_date }} o godz. {{ donation.pick_up_time }}</label>
                                 <br><label>- Ilość worków: {{ donation.quantity }}</label>
-                                <br><label>- Zawartość: {{ donation.institution.category.get_queryset|join:", " }}</label>
+<!--                                 <br><label>- Zawartość: {{ donation.institution.category.get_queryset|join:", " }}</label> -->
                                 <br><label>- Odbiorca: {{ donation.institution.get_type_display }} "{{ donation.institution }}"</label><br>
                             </p>
 
